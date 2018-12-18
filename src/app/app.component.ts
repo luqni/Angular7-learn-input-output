@@ -5,6 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'enigma';
+  showChild:boolean=true;
+
+  showForm(){
+    this.showChild=true;
+  }
+  hideForm(){
+    this.showChild=false;
+  }
 }
+

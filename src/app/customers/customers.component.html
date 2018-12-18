@@ -1,0 +1,100 @@
+
+<form>
+<table align="center" border="1">
+    <h1 align="center">Customers</h1>
+    <hr>
+  <tr>
+    
+      <label>First Name :</label>
+      <input type="text" name="firstname" [(ngModel)]="firstname">
+
+      <br><br>
+      <label>Last Name :</label>
+      <input type="text" name="lastname" [(ngModel)]="lastname">
+      <!-- <br><br>
+      <label>User Name :</label>
+      <input type="text" name="username" [(ngModel)]="username">
+      <br><br>
+      <label>Password :</label>
+      <input type="password" name="lastname" ngModel>
+      <br><br>
+      <label>Phone Type :</label>
+      <select name="phonetype" ngModel>
+        <option>Android</option>
+        <option>Iphone</option>
+      </select>
+      <br><br>
+      <label>Phone Number :</label>
+      <input type="number" name="phonenumber" ngModel>
+      <br><br>
+      <label>Birth Date :</label>
+      <input type="date" name="birthdate" ngModel> -->
+  </tr>
+  <tr>
+    <td align="center">
+      <!-- <button type="submit" (click)="ok()">Submit</button> -->
+      <button type="reset">Reset</button>
+    </td>
+  </tr>
+
+</table>
+</form>
+<!-- method tangkap($event) digunakan untuk output dari hasil inputan di child -->
+<app-test (tes)="tangkap($event)" *ngIf="showChild" [PData]="firstname" [PData2]="lastname"></app-test>
+
+<button (click)="showdata()">show</button>
+<button (click)="hidedata()">hide</button>
+
+<!-- <input type="text" [(ngModel)]="parents">
+<app-test [PData]="parents"></app-test> -->
+
+<!-- <body>
+
+    <h2>Responsive Form</h2>
+    <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+    
+    <div class="container">
+      <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Country</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+      </form>
+    </div>
+    
+    </body> -->
